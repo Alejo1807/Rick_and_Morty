@@ -1,28 +1,18 @@
-var fs = require("fs");
-var http = require("http");
-const { type } = require("os");
-var getCharById = require("../controllers/getCharById.js")
-var getCharDetail = require("../controllers/getCharDetail.js")
+const express = require("express");
+const router = require('./index.js')
+const cors = require('cors')
 
-http.createServer(function(req,res){
-    res.setHeader('Access-Control-Allow-Origin', '*');
+const server = express();
+const PORT = 3001;
 
-    if(req.url.includes('onsearch')){
+server.use(cors({
+    origin: '*'
+}));
 
-        const array= req.url.split('/');
-        const id=parseInt(array[array.length-1])
+server.use(express.json());
+server.use('/',router);
 
-        getCharById(res,id)
-    }
-
-    if(req.url.includes('detail')){
-        const array= req.url.split('/');
-        const id=parseInt(array[array.length-1])
-
-        getCharDetail(res,id)
-    }
-    
-
-
-}).listen(3001,"localhost")
+server.listen(PORT, () => {
+    console.log('Server raised in port ' + PORT);
+ });
 

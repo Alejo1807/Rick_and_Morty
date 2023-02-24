@@ -1,19 +1,37 @@
 var axios = require("axios")
 
-getCharDetail = (res,id)=>{
-    axios(`https://rickandmortyapi.com/api/character/${id}`)
+const URL = "https://rickandmortyapi.com/api/character/"
+
+getCharDetail = (req,res)=>{
+
+    const {id} = req.params
+
+    axios(`${URL}${id}`)
     .then(response => response.data)
     .then(data => {
         const character = {
-            ...data
+            id:data.id,
+            data:data.image,
+            name:data.name,
+            gender:data.gender,
+            species:data.species,
+            image:data.image,
+            origin:data.origin
         }
 
-        res.writeHead(200,{"Content-Type":"application/json"})
-        res.end(JSON.stringify(character))
+        return res.status(200).json(character)
     })
     .catch(error => {
-        res.writeHead(500,{"Content-Type":"text/plain"});
-        res.end(error.message);})
+        return res.status(500).json(error.message)
+    })
 }
 
 module.exports = getCharDetail
+
+a= {id:1,
+    data:"https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+    name:"Rick Sanchez",
+    gender:"Male",
+    species:"Human",
+    image:"https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+    origin:{name:"Earth (C-137)",url:"https://rickandmortyapi.com/api/location/1"}}

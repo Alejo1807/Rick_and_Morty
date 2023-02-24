@@ -1,9 +1,13 @@
 var axios = require("axios")
 
-getCharById = (res,id)=>{
 
-    console.log('entré a getChar')
-    axios(`https://rickandmortyapi.com/api/character/${id}`)
+const URL = "https://rickandmortyapi.com/api/character/"
+
+getCharById = (req,res)=>{
+
+    const {id} = req.params
+
+    axios(`${URL}${id}`)
     .then(response => response.data)
     .then(data => {
         const character = {
@@ -15,12 +19,10 @@ getCharById = (res,id)=>{
             image:data.image
         }
 
-        res.writeHead(200,{"Content-Type":"application/json"})
-        res.end(JSON.stringify(character))
+        return res.status(200).json(character)
     })
     .catch(error => {
-        res.writeHead(500,{"Content-Type":"text/plain"});
-        res.end(error.message);
+        return res.status(500).json(error.message)
     })
 }
 

@@ -6,8 +6,9 @@ import actions from "../../redux/actions";
 import { connect } from "react-redux";
 
 function Card(props) {
-
    const [isFav,setIsFav] =useState(false);
+   const {id,name,species,gender,image} = props
+   const character = {id,name,species,gender,image}
 
    const handleFavorite = () => {
       if(isFav===true){
@@ -15,7 +16,7 @@ function Card(props) {
          setIsFav(false);
       } else {
          setIsFav(true);
-         props.addFavorite(props)
+         props.addFavorite(character)
       }
    }
    

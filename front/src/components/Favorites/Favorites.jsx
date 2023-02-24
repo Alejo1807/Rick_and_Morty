@@ -18,6 +18,10 @@ function Favorites(props) {
         Dispatch(actions.filterCards(e))
     }
 
+    function reset(){
+        Dispatch(actions.getFavorites())
+    }
+
     return (
        <div className={style.divCards}>
         {console.log("me renderizo")}
@@ -33,6 +37,8 @@ function Favorites(props) {
                 <option value="Genderless">Genderless</option>
                 <option value="unknown">unknown</option>
             </select>
+
+            <button onClick={reset} >Resetear</button>
             
         </div>
 

@@ -1,0 +1,3 @@
+favs = []
+
+module.exports = {favs}
