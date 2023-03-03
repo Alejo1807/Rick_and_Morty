@@ -7,13 +7,21 @@ import { NavLink } from "react-router-dom";
 export default function Nav(props){
     return(
         <div className={style.divNav}>
-            <NavLink to="/home">Home</NavLink>
-            <NavLink to="/favorites">Favorites</NavLink>
-            <NavLink to="/about">About</NavLink>
-            <SearchBar onSearch={props.onSearch}/>
-            <Aleatorio onSearch={props.onSearch}/>
-            <button onClick={props.logout}>Logout</button>
+            <div>
+                <NavLink to="/home" className={({isActive})=> isActive ? style.active : style.NavLink}>Home</NavLink>
+                <NavLink to="/favorites" className={({isActive})=> isActive ? style.active : style.NavLink}>Favorites</NavLink>
+                <NavLink to="/about" className={({isActive})=> isActive ? style.active : style.NavLink}>About</NavLink>
+            </div>
+
+            <div>
+                <SearchBar onSearch={props.onSearch}/>
+                <Aleatorio onSearch={props.onSearch}/>
+            </div>
+            <div>
+                <button onClick={props.logout} className={style.logout}>Logout</button>
+            </div> 
         </div>
     )
 
 } 
+

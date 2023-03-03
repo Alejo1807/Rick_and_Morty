@@ -1,0 +1,21 @@
+.aleatorio{
+    background-color: rgb(151, 199, 236);
+    color:white;
+    margin: 10% 10% 10% 10%;
+    border-radius: 15%;
+    border: 0px;
+}
+
+.aleatorio:hover{
+    background-color: rgba(151, 199, 236,0);
+}
+
+.divAleatorio{
+    background: linear-gradient(217deg,rgba(255, 0, 0, 0.8),rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+    border-radius: 15%;
+    margin-left: 10%;
+    display:inline;
+    justify-content: start;
+    align-content: start;
+    padding: 0.5% 5% 0.5% 5%;
+}

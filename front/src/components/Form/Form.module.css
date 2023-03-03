@@ -1,0 +1,38 @@
+.form {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.form form{
+    background-color: rgba(100, 100, 100, 0.8);
+    width: 40%;
+    display:inline-flex;
+}
+
+.danger{
+    color: red;
+    font-size: x-small;
+    margin-top: 0%;
+}
+
+.divInvisible{
+    color: rgba(0, 0, 000, 0);
+}
+
+.form input{
+    width: 200px;;
+}
+
+.img{
+    width: 180px;
+    height: auto;
+}
+
+.form figure{
+    display:grid;
+    align-content: center;
+    justify-content: center;
+    margin: 0%;
+    margin-bottom: 10%;
+}
