@@ -1,5 +1,5 @@
 .aleatorio{
-    background-color: rgb(151, 199, 236);
+    background-color: rgba(103, 103, 103,0.5);
     color:white;
     margin: 10% 10% 10% 10%;
     border-radius: 15%;
@@ -12,10 +12,22 @@
 
 .divAleatorio{
     background: linear-gradient(217deg,rgba(255, 0, 0, 0.8),rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+    animation: color 6s linear infinite;
     border-radius: 15%;
     margin-left: 10%;
     display:inline;
     justify-content: start;
     align-content: start;
     padding: 0.5% 5% 0.5% 5%;
+    background-size: 200%;
+}
+
+@keyframes color {
+    from {
+        background-position: 0% 50%;
+    }
+
+    to {
+        background-position: 100% 50%;
+    }
 }

@@ -27,7 +27,7 @@ function Card(props) {
    return (
       <div key={props.index} className={style.divCard}>
          <div>
-            <NavLink to={`/detail/${props.id}`}>
+            <NavLink to={`/detail/${props.id}`} className={style.Nav}>
                <h1>{ props.name }</h1>
             </NavLink>
             <div>

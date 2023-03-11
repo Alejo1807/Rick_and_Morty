@@ -1,9 +1,11 @@
+
 .App {
    text-align: center;
-   background-size:cover
+   background-size:cover;
 }
 
 .divCartas{
    display: flex;
    justify-content: contain;
 }
+

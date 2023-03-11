@@ -1,9 +1,15 @@
+@font-face {
+    font-family: 'Bradley';
+    src: url(../../Bradleys_Pen.ttf);
+ }
+
 .divNav{
     background-color: rgba(100, 100, 100, 0.6);
     display: flex;
     justify-content:space-evenly;
     align-content: center;
     border-radius: 3%;
+    font-family: 'Bradley';
 }
 
 .divNav div{
@@ -13,11 +19,11 @@
 }
 
 .NavLink{
-    background-color: rgb(151, 199, 236);
+    background-color: rgb(68, 158, 227);
     border: 0px;
     border-radius: 10%;
     margin: 5% 5% 5% 5%;
-    padding:  4% 10% 0.5% 10%;
+    padding:  7% 10% 0.5% 10%;
     color: white;
     text-decoration: none;
     width: max-content;
@@ -31,7 +37,7 @@
     border: 0px;
     border-radius: 10%;
     margin: 3% 5% 3% 5%;
-    padding:  6% 10% 0.5% 10%;
+    padding:  8% 10% 0.5% 10%;
     color: black;
     text-decoration: none;
     width: max-content;
@@ -59,7 +65,7 @@
     text-align: center;
     align-content: center;
     display: flex;
-   
+    font-family: 'Bradley';
 }
 
 .logout:hover{

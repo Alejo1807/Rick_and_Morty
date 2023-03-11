@@ -24,8 +24,7 @@ function Favorites(props) {
 
     return (
        <div className={style.divCards}>
-        {console.log("me renderizo")}
-        <div>
+        <div className={style.div1}>
             <select name="Order" onChange={order}>
                 <option value="Ascendente">Ascendente</option>
                 <option value="Descendente">Descendente</option>
@@ -41,6 +40,7 @@ function Favorites(props) {
             <button onClick={reset} >Resetear</button>
             
         </div>
+        <br />
 
           {myFavorites.map(card=><Card 
           key={myFavorites.indexOf(card)}

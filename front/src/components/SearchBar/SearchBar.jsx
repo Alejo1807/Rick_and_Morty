@@ -14,7 +14,7 @@ export default function SearchBar(props) {
 
    return (
       <div>
-         <input type='search' onChange={handleChange} className={style.search}/>
+         <input type='search' placeholder='ID' onChange={handleChange} className={style.search}/>
       <button onClick={()=>props.onSearch(character)} className={style.NavLink}>Agregar</button> 
       </div>
    );

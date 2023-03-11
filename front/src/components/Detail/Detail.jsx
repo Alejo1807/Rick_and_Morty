@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import style from './Detail.module.css'
 
 export default function Details () {
 
@@ -31,14 +32,22 @@ export default function Details () {
       }, [id]);
 
       return(
-        <div>
-            <h1>{character.name}</h1>
-            <h2>Status: {character.status}</h2>
-            <h2>Especie: {character.species}</h2>
-            <h2>Género: {character.gender}</h2>
-            <h2>Origen: {origen.name}</h2>
-            <button onClick={backToHome}>Volver</button>
+        <div className={style.div1}>
+          <div className={style.div}>
+            <div>
+              <h1>{character.name}</h1>
+              <h2>Status: {character.status}</h2>
+              <h2>Especie: {character.species}</h2>
+              <h2>Género: {character.gender}</h2>
+              <h2>Origen: {origen.name}</h2>
+              <button onClick={backToHome}>Volver</button>
+            </div>
+
+            <div>
             <img  src={ character.image } alt=""/> 
+            </div>
+              
+          </div>
         </div>
       )
 
